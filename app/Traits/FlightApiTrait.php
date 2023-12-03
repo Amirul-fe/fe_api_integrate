@@ -34,7 +34,7 @@ trait FlightApiTrait
         $response = curl_exec($ch);
 
         if (curl_errno($ch)) {
-            
+
             return response()->json([
                 'status' => 'failed to connect',
                 'message' => curl_error($ch),
